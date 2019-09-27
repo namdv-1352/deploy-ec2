@@ -5,14 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+# Basic
 gem "rails", "~> 5.1.6"
 gem "mysql2", ">= 0.3.18", "< 0.6.0"
 gem "puma", "~> 3.7"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
-gem "coffee-rails", "~> 4.2"
-gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 
 #deploy
@@ -21,6 +19,13 @@ gem "capistrano3-puma"
 gem "capistrano-rails"
 gem "capistrano-bundler"
 gem "capistrano-rvm"
+
+# Env
+gem "dotenv-rails"
+gem "config"
+
+# Support
+gem "aws-sdk", "~> 3"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
